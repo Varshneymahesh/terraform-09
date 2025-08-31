@@ -39,9 +39,8 @@ jobs:
     needs: terraformPlan
     environment:
       name: dev
-      
-      
-       
+      steps:
+      - run: echo "Waiting for manual approval..."
 
 
   terraformapply:
@@ -66,6 +65,9 @@ jobs:
     - name: Terraform apply
       run: terraform apply --auto-approve
       working-directory: dev
+
+        
+
 
         
 
