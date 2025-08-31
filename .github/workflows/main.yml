@@ -21,13 +21,11 @@ jobs:
           subscription-id: "75146836-fdff-4091-9190-2ee9cca9c8b6"
 
       - name: Terraform Init with Backend
-        run: |
-          terraform init \
-            -backend-config="resource_group_name=myrg" \
-            -backend-config="storage_account_name=stgmahesh01" \
-            -backend-config="container_name=mycon01" \
-            -backend-config="key=dev.terraform.tfstate"
+        
+        run: terraform init -backend-config="resource_group_name=myrg" -backend-config="storage_account_name=mytfstorage" -backend-config="container_name=tfstate" -backend-config="key=dev.terraform.tfstate"
         working-directory: dev
+
+        
 
       - name: Terraform Validate
         run: terraform validate
