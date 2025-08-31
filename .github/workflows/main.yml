@@ -18,7 +18,7 @@ jobs:
         
     - name: Initialize Terraform
       run: terraform init
-      working-directory: /terraform-09/dev
+      working-directory: terraform-09/dev
     
                  
               
