@@ -39,7 +39,7 @@ jobs:
     needs: terraformPlan
     environment:
       name: dev
-      steps:
+    steps:
       - run: echo "Waiting for manual approval..."
 
 
